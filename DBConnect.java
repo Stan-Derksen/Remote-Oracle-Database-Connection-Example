@@ -6,9 +6,9 @@ import java.sql.*;
 
 public class DBConnect {
 
-    private static final String host = "jdbc:oracle:thin:@//cytosine.nl:1521/xe";
-    private static final String username =  "owe1_pg6";
-    private static final String password = "blaat1234";
+    private static final String host = "";
+    private static final String username =  """;
+    private static final String password = "";
     private static Connection con;
     private static Statement statement;
     private static final String query = "SELECT * FROM Test";

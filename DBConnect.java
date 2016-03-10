@@ -6,6 +6,8 @@ import java.sql.*;
 
 public class DBConnect {
 
+    //Properties
+    //Connection Strings (host, username, password) have been left out for safety reasons.
     private static final String host = "";
     private static final String username =  """;
     private static final String password = "";
@@ -36,6 +38,7 @@ public class DBConnect {
 
     }
 
+    //Creates and returns a connection.
     private static Connection createConnection() throws SQLException{
 
         System.out.println("Registering Oracle Database Driver.");
@@ -64,23 +67,7 @@ public class DBConnect {
 
     }
 
-    /*public static Object[][] formatRowsIntoTable(ResultSet resultSet) throws SQLException{
-
-        ResultSetMetaData rsmd = resultSet.getMetaData();
-
-        int aantalRows = getRows(resultSet);
-        int aantalColumns = rsmd.getColumnCount();
-
-        dataTable = new Object[aantalRows][aantalColumns];
-
-        while (resultSet.next()) {
-
-        }
-
-        return null;
-
-    }*/
-
+    //Gets and returns all rows from the database.
     private static ResultSet getAllRows(Connection con) throws SQLException {
 
         //Make sure the ResultSet is scrollable.
@@ -94,6 +81,7 @@ public class DBConnect {
 
     }
 
+    //Determines the amount of rows in a ResultSet.
     public static int getRowCount(ResultSet res) {
 
         int totalRows;
